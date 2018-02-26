@@ -2,6 +2,7 @@
 #include "ofApp.h"
 #include "ofAppNoWindowRun.h"
 #include "ofAppNoWindow.h"
+#include "ofAppGlutWindow.h"
 
 //========================================================================
 int main( ){
@@ -17,8 +18,11 @@ int main( ){
     //scriptUtility s = scriptUtility();
     //s.run();
     
-    ofAppNoWindow window;
-    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+//    ofAppNoWindow window;
+//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+    ofAppGlutWindow window; // create a window
+    // set width, height, mode (OF_WINDOW or OF_FULLSCREEN)
+    ofSetupOpenGL(&window, 0,0, OF_WINDOW);
     ofRunApp(new ofAppNoWindowRun());
 
 }
