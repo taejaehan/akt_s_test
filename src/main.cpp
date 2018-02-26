@@ -4,7 +4,7 @@
 #include "ofAppNoWindow.h"
 //========================================================================
 int main( ){
-//    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
+    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
 //    ofAppNoWindow window;
 //    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
     // this kicks off the running of my app
@@ -16,8 +16,8 @@ int main( ){
     //scriptUtility s = scriptUtility();
     //s.run();
     
-    ofAppNoWindow window;
-    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+//    ofAppNoWindow window;
+//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
     ofRunApp(new ofAppNoWindowRun());
 
 }
