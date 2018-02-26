@@ -10,7 +10,7 @@ void scriptUtility::run()
 {
     
 //    string absolutePath = "/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit";
-    string absolutePath = "/home/ubuntu/of_v0.9.8_linux64_release/apps/myApps/akt_s_test";
+    string absolutePath = "/home/ubuntu/of_v0.9.8_linux64_relxease/apps/myApps/akt_s_test";
     string imageFn = "not set yet";
 
     //pics settings

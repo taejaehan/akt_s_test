@@ -3,10 +3,11 @@
 #include "ofAppNoWindowRun.h"
 #include "ofAppNoWindow.h"
 #include "ofAppGlutWindow.h"
+#include "ofAppGLFWWindow.h"
 
 //========================================================================
 int main( ){
-    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
+//    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
 //    ofAppNoWindow window;
 //    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
     // this kicks off the running of my app
