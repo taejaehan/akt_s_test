@@ -9,6 +9,8 @@
 
 void ofAppNoWindow::setup(){
     //onTypeOfShedValidatedPressed();
+//    ofAppNoWindow window;
+//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
     ofAppNoWindow::runScript();
 }
 
@@ -17,3 +19,29 @@ void ofAppNoWindow::runScript()
     scriptUtility s = scriptUtility();
     s.run();
 }
+
+
+
+//#include "ofMain.h"
+//#include "ofAppNoWindow.h"
+//
+//class ofApp : public ofBaseApp {
+//    
+//public:
+//    void setup()
+//    {
+//        ofSetFrameRate(1000);
+//    }
+//    void update()
+//    {
+//        std::cout << ofGetFrameRate() << std::endl;
+//    }
+//};
+//
+//int main()
+//{
+//    ofAppNoWindow window;
+//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+//    ofRunApp(new ofApp());
+//}
+
