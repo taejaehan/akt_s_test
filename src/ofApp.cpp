@@ -4,32 +4,34 @@
 //--------------------------------------------------------------
 
 void ofApp::setup(){
-    // setup is divid into to part
-    // one before the type of shed is know and one after
-
-    //File
+//    // setup is divid into to part
+//    // one before the type of shed is know and one after
+//
+//    //File
+//
+//    //outputFolder = "/home/makem/Cours/knitProject/outputPics/spider/";
+//    //imageFn = "starik2";                                               // but the input file name here!
+//    //pic.load("/home/makem/Cours/knitProject/inputPics/" + imageFn + ".jpg");
+//
+//    outputFolder = "/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/outputPics/";
+//    imageFn = "lucky_04";                                               // but the input file name here!
+//    pic.load("/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/inputPics/" + imageFn + ".jpg");
+//    pic.setImageType(OF_IMAGE_COLOR);
+//
+//    std::cout << "imageFn : " << imageFn << std::endl;
+//
+//    // Type of shed setup
+//    typeOfShedValidated = false;
+//    guiStart.setup();
+//    guiStart.setName("Initialize your shed");
+//    guiStart.add(typeOfShed.set("gray-additive-sub ", 1,1,3));
+//    guiStart.add(typeOfShedValidatedBtn.setup("validate your shed"));
+//    guiStart.setPosition(200,200);
+//    typeOfShedValidatedBtn.addListener(this, &ofApp::onTypeOfShedValidatedPressed);
+//    //onTypeOfShedValidatedPressed();
     
-    //outputFolder = "/home/makem/Cours/knitProject/outputPics/spider/";
-    //imageFn = "starik2";                                               // but the input file name here!
-    //pic.load("/home/makem/Cours/knitProject/inputPics/" + imageFn + ".jpg");
     
-    outputFolder = "/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/outputPics/";
-    imageFn = "lucky_04";                                               // but the input file name here!
-    pic.load("/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/inputPics/" + imageFn + ".jpg");
-    pic.setImageType(OF_IMAGE_COLOR);
-
-    std::cout << "imageFn : " << imageFn << std::endl;
-    
-    // Type of shed setup
-    typeOfShedValidated = false;
-    guiStart.setup();
-    guiStart.setName("Initialize your shed");
-    guiStart.add(typeOfShed.set("gray-additive-sub ", 1,1,3));
-    guiStart.add(typeOfShedValidatedBtn.setup("validate your shed"));
-    guiStart.setPosition(200,200);
-    typeOfShedValidatedBtn.addListener(this, &ofApp::onTypeOfShedValidatedPressed);
-    //onTypeOfShedValidatedPressed();
-//    ofApp::runScript();
+    ofApp::runScript();
 
 }
 

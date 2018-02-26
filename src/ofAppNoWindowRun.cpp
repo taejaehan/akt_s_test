@@ -1,0 +1,51 @@
+//
+//  ofAppNoWindow.cpp
+//  knit
+//
+//  Created by 한태재 on 2018. 2. 26..
+//
+
+#include "ofMain.h"
+#include "ofAppNoWindowRun.h"
+
+
+//void ofAppNoWindowRun::setup(){
+//    //onTypeOfShedValidatedPressed();
+////    ofAppNoWindow window;
+////    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+//    ofAppNoWindowRun::runScript();
+//}
+
+
+//void ofAppNoWindowRun::runScript()
+//{
+//    scriptUtility s = scriptUtility();
+//    s.run();
+//}
+
+
+
+//#include "ofMain.h"
+//#include "ofAppNoWindow.h"
+//
+//class ofApp : public ofBaseApp {
+//    
+//public:
+//    void setup()
+//    {
+//        ofSetFrameRate(1000);
+//    }
+//    void update()
+//    {
+//        std::cout << ofGetFrameRate() << std::endl;
+//    }
+//};
+//
+//int main()
+//{
+//    ofAppNoWindow window;
+//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+//    ofRunApp(new ofApp());
+//}
+
+

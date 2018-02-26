@@ -1,5 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
+#include "ofAppNoWindowRun.h"
 #include "ofAppNoWindow.h"
 
 //========================================================================
@@ -12,8 +13,12 @@ int main( ){
     // pass in width and height too:
 //    ofRunApp(new ofApp());
 
-    ofRunApp(new ofAppNoWindow());
+//    ofRunApp(new ofAppNoWindow());
     //scriptUtility s = scriptUtility();
     //s.run();
+    
+    ofAppNoWindow window;
+    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
+    ofRunApp(new ofAppNoWindowRun());
 
 }
