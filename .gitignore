@@ -1,0 +1,9 @@
+*.autosave
+bin/*
+obj/*
+outputPics/
+Doc/
+build/
+knit.xcodeproj
+knitDebug.entitlements
+Project.xcconfig

@@ -1,0 +1,4 @@
+ofxGui
+ofxXmlSettings
+ofxJSON
+ofxJsonSettings
