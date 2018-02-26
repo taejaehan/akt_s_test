@@ -1,0 +1,14 @@
+<Parameters>
+	<Global_Algorithm_Parameters>
+		<max_#steps>20000</max_#steps>
+	</Global_Algorithm_Parameters>
+	<In_Fly_Parameters>
+		<ScoreFunction>4</ScoreFunction>
+		<Draw_Opacity>9</Draw_Opacity>
+		<Algo_Opacity__only_use_with_some_score_function>9</Algo_Opacity__only_use_with_some_score_function>
+	</In_Fly_Parameters>
+	<Process_infos>
+		<#steps>0</#steps>
+		<absolutError>10771848</absolutError>
+	</Process_infos>
+</Parameters>
