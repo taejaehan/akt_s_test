@@ -1,7 +1,7 @@
 *.autosave
 bin/*
 obj/*
-outputPics/
+outputPics/*
 Doc/
 build/
 knit.xcodeproj
