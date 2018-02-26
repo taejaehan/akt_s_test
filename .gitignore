@@ -1,5 +1,5 @@
 *.autosave
-bin/*
+
 obj/*
 outputPics/
 Doc/
