@@ -1,9 +1,9 @@
 *.autosave
 bin/*
 obj/*
-outputPics/*
 Doc/
 build/
+outputPics/*
 knit.xcodeproj
 knitDebug.entitlements
 Project.xcconfig
