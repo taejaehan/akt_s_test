@@ -26,12 +26,12 @@ public:
     }
     void update()
     {
-//        std::cout << ofGetFrameRate() << std::endl;
+    //    std::cout << ofGetFrameRate() << std::endl;
     }
 //    void setup();
 //    void update();
     void runScript(){
-        scriptUtility s = scriptUtility();
+	scriptUtility s = scriptUtility();
         s.run();
     };
 };
