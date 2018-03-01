@@ -40,7 +40,7 @@ void scriptUtility::run()
 
         //genericShed * workshop = new colorShed(pic, imageFn);
         genericShed * workshop = new grayShed(pic, imageFn);
-
+	
         abstractWheel wel = wheelFromFile(pinPositionsInputFn, workshop->w, workshop->h);
         wel.setup();
 
