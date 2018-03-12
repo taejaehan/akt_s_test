@@ -14,7 +14,7 @@ void ofApp::setup(){
     //pic.load("/home/makem/Cours/knitProject/inputPics/" + imageFn + ".jpg");
 
     outputFolder = "/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/outputPics/";
-    imageFn = "oh_01";                                               // but the input file name here!
+    imageFn = "ys_f_02_03";                                               // but the input file name here!
     pic.load("/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/inputPics/" + imageFn + ".jpg");
     pic.setImageType(OF_IMAGE_COLOR);
 
@@ -37,9 +37,9 @@ void ofApp::setup(){
 
 void ofApp::onTypeOfShedValidatedPressed(){
 
-
+    string jsonPath = "/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/json/";
     if (typeOfShed == 1){
-        workshop = new grayShed(pic, imageFn);
+        workshop = new grayShed(pic, imageFn, jsonPath);
     }
     else if (typeOfShed == 2){
         workshop = new colorShed(pic, imageFn);
@@ -59,8 +59,8 @@ void ofApp::setupSecondePart(){
     saveOption = true;  // if true -> save at each 1000 steps the result image into the output dir
     extraPins =  std::list<ofVec2f> ();
 
-    pinPositionsSaverFn = outputFolder + "pinPositions.dat";
-    pinPositionsInputFn = outputFolder + "inputPinPositions.dat";
+    pinPositionsSaverFn = outputFolder + "pinPositions_450.dat";
+    pinPositionsInputFn = outputFolder + "inputPinPositions_450.dat";
 
 
     numberOfCall = 0;
@@ -404,7 +404,7 @@ void ofApp::onSaveImagesPressed()
 
 void ofApp::runScript()
 {
-    scriptUtility s = scriptUtility();
+    scriptUtility s = scriptUtility("default","default","default");
     s.run();
 
 }

@@ -8,7 +8,7 @@ class grayShed : public genericShed
 {
 public:
 
-    grayShed(ofImage oriImg, string imageName);
+    grayShed(ofImage oriImg, string imageName, string jsonPath);
 
 
     ofImage sketchImg; // use by the algo
@@ -17,14 +17,19 @@ public:
     ofParameter<int> algoOpacityP; // used by lineScore, lineScoreEquilibrate, l
 
     ofParameter<int> scoreFuntionToUse;
-
+    string thisJsonPath;
+    string thisImageName;
 
    int initialMaskFactor;
 
 
     int currentPinIdx1; // used in computeNextPinAndDrawOneString()
     int nextPinIdx1; // used in computeNextPinAndDrawOneString()
-
+    
+    bool endStep;
+    int berforeIdx;
+    int overlapCount;
+    
     void setSketch();
     void setBrushedImg();
     void initializeMask(int initValue);
@@ -44,7 +49,7 @@ public:
     float lineScoreWeighByMaskFactor(list<int *> l);  // use mask    //6
     float lineScoreRandom(list<int *> l);    //7
 
-
+    
     float (grayShed::*pScoreFunctionInUse)(list<int * > ); // this is the score function use by findNextBestPin ( take a look to pointer to member function, if you don't know this grammar)
 
     int findNextBestPin(int pinIdx);

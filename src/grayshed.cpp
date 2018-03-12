@@ -5,12 +5,15 @@
 
 ofxXmlSettings XML;
 
-grayShed::grayShed(ofImage oriImg, string imageName) : genericShed(oriImg, imageName)
+grayShed::grayShed(ofImage oriImg, string imageName, string jsonPath) : genericShed(oriImg, imageName)
 {
     type = "grayShed";
-
+    thisImageName = imageName;
+    thisJsonPath = jsonPath;
     setEmptyResult(ofColor::white);
-
+    
+    std::cout << "thisImageName :  " << thisImageName  << std::endl;
+    std::cout << "jsonPath :  " << jsonPath  << std::endl;
     setupGrayOfParameters();
 
     // initialize the sketch image who is use to perform the computation
@@ -21,7 +24,10 @@ grayShed::grayShed(ofImage oriImg, string imageName) : genericShed(oriImg, image
 
     currentPinIdx1 = 0;
     nextPinIdx1 = -1;
-
+    
+    endStep = false;
+    berforeIdx = -1;
+    overlapCount = 0;
 
 }
 
@@ -448,10 +454,6 @@ int grayShed::findNextBestPin(int pinIdx){
 //std::vector< int > pinIdxarray;
 //ofxJSON pinIdxarray2;
 
-bool endStep = false;
-int berforeIdx = -1;
-int overlapCount = 0;
-
 void grayShed::computeAndDrawOneStep()
 {
 
@@ -517,6 +519,7 @@ void grayShed::computeAndDrawOneStep()
             overlapCount = 0;
         }
         
+        std::cout << "overlapCount: " << overlapCount << std::endl;
         if(overlapCount < 5){
             //XML.setValue("data:currentPin"+std::to_string(stepsNumberP), currentPinIdx1);
             XML.setValue("currentPin", currentPinIdx1,stepsNumberP);
@@ -546,9 +549,11 @@ void grayShed::computeAndDrawOneStep()
             }
             
             
-            Settings::get().save("/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/outputPics/soyou_gray_210.json");
+            Settings::get().save(thisJsonPath + thisImageName + ".json");
             // Or disable the default pretty print with..
             //Settings::get().save("data.json", false);
+            
+            std::cout << "Settings json save "  << std::endl;
         }
 
         // update the pin
@@ -571,7 +576,7 @@ void grayShed::computeAndDrawOneStep()
         Settings::getInt("limitPinsCount") =  limitPinsCount;
         
         
-        Settings::get().save("/Users/h/Desktop/of_v0.9.8_osx_release/apps/myApps/knit/outputPics/soyou_gray_210.json");
+        Settings::get().save(thisJsonPath + thisImageName + ".json");
     }
 
 

@@ -44,6 +44,7 @@ public:
     void setupWheel(abstractWheel wel);
 
     virtual int saveResultImage(string folder);
+    virtual int saveLastResultImage(string folder, string name);
     string getBasicInfos();
     virtual string getInfos();
 

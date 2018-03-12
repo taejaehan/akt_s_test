@@ -125,6 +125,14 @@ int genericShed::saveResultImage(string folder)
     return 1;
 }
 
+int genericShed::saveLastResultImage(string folder, string name)
+{
+    
+    result.save(folder + name + "_last.jpg");
+    std::cout << "result image saved in: " << folder + name << std::endl;
+    
+    return 1;
+}
 
 void genericShed::computeAndDrawOneStep()
 {

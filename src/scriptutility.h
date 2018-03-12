@@ -9,8 +9,11 @@
 class scriptUtility
 {
 public:
-
-    scriptUtility();
+    
+    string imgName;
+    string indivpath;
+    string mediaroot;
+    scriptUtility(string mediaroot, string indivpath, string imgName);
     void run();
 
 };

@@ -3,6 +3,7 @@ bin/*
 obj/*
 Doc/
 build/
+inputPics/*
 outputPics/*
 knit.xcodeproj
 knitDebug.entitlements

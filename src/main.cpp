@@ -3,24 +3,26 @@
 #include "ofAppNoWindowRun.h"
 #include "ofAppNoWindow.h"
 #include "ofAppGlutWindow.h"
+#include "ofxArgs.h"
 
 //========================================================================
-int main( ){
-//    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
-//    ofAppNoWindow window;
-//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
-    // this kicks off the running of my app
-    // can be OF_WINDOW or OF_FULLSCREEN
-    // pass in width and height too:
-//    ofRunApp(new ofApp());
-
-//    ofRunApp(new ofAppNoWindow());
-    //scriptUtility s = scriptUtility();
-    //s.run();
+int main(int argc, char *argv[] ){
     
+    ofxArgs* args = new ofxArgs(argc, argv);
+    std::cout << "args!"<< args << std::endl;
+    args->printArgs();
+    args->printOpts();
+ 
+    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
+    
+    
+//    ofAppGlutWindow window;
+//    ofSetupOpenGL(&window, 1024, 768, OF_WINDOW);
     ofAppNoWindow window;
     ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
-    ofRunApp(new ofAppNoWindowRun());
+
+    ofRunApp(new ofAppNoWindowRun(args));
 //    ofRunApp(new ofApp());
+    delete args;
 
 }

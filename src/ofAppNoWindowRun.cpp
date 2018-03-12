@@ -7,45 +7,29 @@
 
 #include "ofMain.h"
 #include "ofAppNoWindowRun.h"
+#include "ofAppNoWindow.h"
+
+ofAppNoWindowRun::ofAppNoWindowRun(ofxArgs* args){
+    this->args = args;
+}
+void ofAppNoWindowRun::setup(){
+    if(this->args->contains("-imgname")){
+        this->imgname = this->args->getString("-imgname");
+    }
+    if(this->args->contains("-mediaroot")){
+        this->mediaroot = this->args->getString("-mediaroot");
+    }
+    if(this->args->contains("-indivpath")){
+        this->indivpath = this->args->getString("-indivpath");
+    }
+    runScript();
+}
 
 
-//void ofAppNoWindowRun::setup(){
-//    //onTypeOfShedValidatedPressed();
-////    ofAppNoWindow window;
-////    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
-//    ofAppNoWindowRun::runScript();
-//}
-
-
-//void ofAppNoWindowRun::runScript()
-//{
-//    scriptUtility s = scriptUtility();
-//    s.run();
-//}
-
-
-
-//#include "ofMain.h"
-//#include "ofAppNoWindow.h"
-//
-//class ofApp : public ofBaseApp {
-//    
-//public:
-//    void setup()
-//    {
-//        ofSetFrameRate(1000);
-//    }
-//    void update()
-//    {
-//        std::cout << ofGetFrameRate() << std::endl;
-//    }
-//};
-//
-//int main()
-//{
-//    ofAppNoWindow window;
-//    ofSetupOpenGL(&window, 0, 0, OF_WINDOW);
-//    ofRunApp(new ofApp());
-//}
-
+void ofAppNoWindowRun::runScript()
+{
+    scriptUtility s = scriptUtility(this->mediaroot, this->indivpath, this->imgname);
+    s.run();
+    ofAppNoWindow::exitApp();
+}
 

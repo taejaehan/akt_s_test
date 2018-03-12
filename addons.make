@@ -2,3 +2,4 @@ ofxGui
 ofxXmlSettings
 ofxJSON
 ofxJsonSettings
+ofxArgs
