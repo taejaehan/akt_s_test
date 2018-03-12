@@ -13,7 +13,7 @@ int main(int argc, char *argv[] ){
     args->printArgs();
     args->printOpts();
  
-    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
+//    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
     
     
 //    ofAppGlutWindow window;
